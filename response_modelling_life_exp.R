@@ -1,5 +1,5 @@
- library(stringr)
-  library(webshot)
+library(stringr)
+library(webshot)
 library(plotly)
 library(GGally)
 library(cluster.datasets)
@@ -101,7 +101,9 @@ length(text_c)
 text_c
 
 
-length(predictors)
+text_c[which.max(adj_r_sq)]
+
+# length(predictors)
 length(adj_r_sq)
 predictors
 plot_ly(data, x = ~predictors, y = ~adj_r_sq, type = 'scatter', mode = 'markers',
@@ -145,6 +147,7 @@ pb <- txtProgressBar(min = 0,      # Minimum value of the progress bar
                      char = "=")   # Character used to create the bar
 
 n <- 1
+
 
 best_model_str <- best_simple_model_str
 best_model_str
@@ -223,6 +226,8 @@ plot_ly(data, x = ~predictors, y = ~adj_r_sq, type = 'scatter', mode = 'markers'
          hoverlabel = list(font = list(family = "Arial", size = 10), borderwidth = 1)
          )
 
+
+text_c[which.max(adj_r_sq)]
 print(combinations)
 
 data$Income

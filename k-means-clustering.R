@@ -178,3 +178,4 @@ fviz_cluster(list(data = as.data.frame(xx), cluster=cm$cluster),
 
 
 fviz_nbclust(as.data.frame(xx), kmeans, method = "wss")
+
